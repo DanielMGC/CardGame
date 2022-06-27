@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "oheVcMe9sq7GNSeD8wQKikgrI8DEr633uhxHbnn+rWZMDVHh+hoZtLzfXPtKHX+7iH8Rmwaufty3o5O9GvrGiA==",
+  "success": true,
+  "projectFilePath": "G:\\Trabalhos\\Code Tests\\GoTo\\CardGame\\CardGameAPI\\CardGameAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DanielMoisesGonzalez\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\DanielMoisesGonzalez\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\DanielMoisesGonzalez\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\DanielMoisesGonzalez\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\DanielMoisesGonzalez\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\DanielMoisesGonzalez\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

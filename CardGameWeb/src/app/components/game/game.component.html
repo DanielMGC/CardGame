@@ -1,0 +1,136 @@
+<div class="title-container">
+    <p class="title">Card Game</p>
+    <p class="subtitle">Coding test for GoTo by Daniel Moises Gonzalez Clua</p>
+</div>
+<div class="game-container">
+    <div class="actions-container">
+        <div class="header">
+            ACTIONS
+        </div>
+        <div class="info-text">
+            {{actionResult}}
+        </div>
+        <div class="action-container">
+            <button (click)="create()">Create Game</button>
+        </div>
+        <div class="action-container">
+            <div class="button-with-input-container">
+                <div>
+                    <button (click)="load()">Load Game</button>
+                </div>
+                <div>
+                    <label>ID:</label>
+                </div>
+                <div>
+                    <input type="text" [(ngModel)]="gameIdToLoad"/>
+                </div>
+            </div>
+        </div>
+        <div class="action-container">
+            <button [disabled]="(game.id == 0)" (click)="end()">End Game</button>
+        </div>
+        <div class="action-container">
+            <div class="button-with-input-container">
+                <div>
+                    <button [disabled]="(game.id == 0)" (click)="addPlayer()" >Add Player</button>
+                </div>
+                <div>
+                    <label>Name:</label>
+                </div>
+                <div>
+                    <input type="text" [(ngModel)]="playerToAdd" />
+                </div>
+            </div>
+        </div>
+        <div class="action-container">
+            <div class="button-with-input-container">
+                <div>
+                    <button  [disabled]="(game.id == 0)" (click)="removePlayer()">Remove Player</button>
+                </div>
+                <div>
+                    <label>Name:</label>
+                </div>
+                <div>
+                    <input type="text" [(ngModel)]="playerToRemove" />
+                </div>
+            </div>
+        </div>
+        <div class="action-container">
+            <button [disabled]="(game.id == 0)" (click)="addDeck()">Add Deck</button>
+        </div>
+        <div class="action-container">
+            <button [disabled]="(game.id == 0)" (click)="shuffle()">Shuffle</button>
+        </div>
+        <div class="action-container">
+            <div class="button-with-input-container">
+                <div>
+                    <button [disabled]="(game.id == 0)" (click)="deal()">Deal</button>
+                </div>
+                <div>
+                    <label>Player:</label>
+                </div>
+                <div>
+                    <input type="text" [(ngModel)]="playerToDeal" />
+                </div>
+            </div>
+        </div>
+        <div class="action-container">
+            <div class="button-with-input-container">
+                <div>
+                </div>
+                <div>
+                    <label>Cards:</label>
+                </div>
+                <div>
+                    <input type="text" [(ngModel)]="cardsToDeal" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="info-container" *ngIf="game.id != 0; else noGame">
+        <div class="header">
+            GAME INFORMATION
+        </div>
+        <div class="info-text">
+            GAME #{{game.id}}
+            <br/>
+            <br/>
+            Number of cards in game deck: {{game.cards?.length}}
+            <br/>
+            Number of players: {{game.players?.length}}
+            <br/>
+            <br/>
+            Undealt cards by suit: {{undealtCardsBySuit}}
+            <br/>
+            <br/>
+            Undealt cards: {{undealtCards}}
+        </div>
+        <div class="header">
+            PLAYER INFORMATION
+        </div>
+        <div *ngIf="orderedPlayers.length > 0; else noPlayers">
+            <div class="info-text margin-bottom-5" *ngFor="let player of orderedPlayers">
+                PLAYER {{player.name}}
+                <br/>
+                <br/>
+                Number of cards: {{player.cards?.length}}
+                <br/>
+                <br/>
+                Total: {{player.total}}
+            </div>
+        </div>
+        <ng-template #noPlayers>
+            <div class="info-text">
+                No players
+            </div>
+        </ng-template>
+        
+    </div>
+    <ng-template #noGame>
+        <div class="info-container">
+            <div class="info-text">
+                No game loaded
+            </div>
+        </div>
+    </ng-template>
+</div>
